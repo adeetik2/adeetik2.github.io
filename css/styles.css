@@ -1,0 +1,305 @@
+#year-selector {
+    margin: auto;
+    width: 1424px;
+    top: -10px;
+    position: relative;
+}
+
+.range {
+    margin-left: 20px;
+    position: relative;
+    width: 925px;
+    height: 5px;
+}
+
+.range input {
+    width: 925px;
+    position: relative;
+    top: -10px;
+    height: 0;
+    -webkit-appearance: none;
+}
+
+
+.range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: -8px 0 0;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    border: 0 !important;
+}
+
+.range input::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    margin: -8px 0 0;
+    border-radius: 50%;
+    background: green	;
+    cursor: pointer;
+    border: 0 !important;
+}
+
+.range input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #0099cb;
+}
+
+
+
+.range input::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #0099cb;
+}
+
+.range input:focus {
+    background: none;
+    outline: none;
+}
+
+.range-labels {
+    margin: 18px 0 0;
+    padding: 0;
+    width: 980px;
+    list-style: none;
+    position: relative;
+
+}
+
+.range-labels li {
+    position: relative;
+    float: left;
+    width: 5.50%;
+    text-align: center;
+    color: #8cd98c;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.range-labels li::before {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    left: 0;
+    content: "";
+    margin: 0 auto;
+    width: 9px;
+    height: 9px;
+    background: #8cd98c;
+    border-radius: 50%;
+}
+
+.range-labels .active {
+    color: green;
+}
+
+.range-labels .selected::before {
+    background: #8cd98c;
+}
+
+.range-labels .active.selected::before {
+    display: none;
+}
+
+#introwp-img
+{
+    background-image: url("../worldpopulation.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;;
+    height:80%;
+    margin:0;
+    padding: 0;
+}
+
+#map {
+    width: 1424px;
+    height: 696px;
+    margin-top: -150px;
+    margin-right: auto;
+    margin-left: auto;s
+    margin-bottom: auto;
+    position: relative;
+    /*border: 1px black solid;*/
+}
+#map-legend {
+    stroke-width: 0.5;
+    stroke: #717171;
+}
+
+#map-legend-axis text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #717171;
+}
+
+#map-legend-axis line, #map-legend-axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+#map-legend-axis path {
+    display: none;
+}
+
+#pyramid {
+    width: 250px;
+    height: 250px;
+}
+
+.age-rect {
+    stroke: #717171;
+    stroke-width: 1;
+}
+
+.age-rect:hover {
+    stroke: #717171;
+    stroke-width: 1;
+    opacity: 1;
+}
+
+.male-age-rect {
+    fill: blue;
+    opacity: 0.7;
+}
+
+.female-age-rect {
+    fill: pink;
+    opacity: 0.8;
+}
+
+#info-selector {
+    margin: auto;
+    top: -50px;
+    width: 1424px;
+    position: relative;
+    height: 80px;
+}
+
+#country-input-label {
+    position: absolute;
+    top: 40px;
+    left: 800px;
+    font-size: 15px;
+}
+
+#country-input {
+    position: absolute;
+    top: 65px;
+    left: 800px;
+    width: 300px;
+}
+
+#type-input-label {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 30px;
+}
+
+
+#type-input-annotation {
+    position: absolute;
+    top: 50px;
+    left: 260px;
+    font-size: 15px;
+}
+
+
+#type-input {
+    position: absolute;
+    top: 65px;
+    left: 250px;
+    width: 395px;
+}
+
+.annotation circle {
+    fill: none;
+    stroke: darkslategrey;
+}
+
+.annotation path {
+    fill: none;
+    stroke: darkslategrey;
+    shape-rendering: crispEdges;
+}
+
+.annotation text {
+    text-shadow: -2px 0 2px #fff,
+    0 2px 2px #fff,
+    2px 0 2px #fff,
+    0 -2px 2px #fff;
+}
+
+#bar {
+    width: 1424px;
+    height: 280px;
+    top: -30px;
+    margin: auto;
+    left: 0px;
+    position: relative;
+    border: 1px black solid;
+}
+
+.year {
+    fill: #8cd98c;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.selected-year {
+    opacity: 1;
+    fill: green;
+
+}
+
+.active-year {
+    opacity: 1;
+    stroke-width: 2;
+    fill: green;
+}
+
+.bar-text {
+    fill: #717171;
+    font-weight: bold;
+}
+
+.bar-point {
+    fill: green;
+}
+
+.bar-line {
+    stroke: green;
+    stroke-width: 1
+}
+
+.grid line {
+    stroke: #717171;
+    stroke-opacity: 0.3;
+    shape-rendering: crispEdges;
+}
+
+.grid text {
+    fill: #717171;
+}
+
+.grid .domain {
+    display: none;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+h2 { color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 32px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; }
+
+p { color: #7a7c7f; font-size: 29px; font-family: "Libre Baskerville", serif; line-height: 45px; text-align: left; text-shadow: 0 1px 1px #fff; padding-top: 20px; }

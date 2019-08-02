@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="fullpage.css"/>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.8/datamaps.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script type="text/javascript" src="fullpage.js"></script>
+
+    <title>2010 - 2095 Population Data</title>
+
+
+<body>
+
+<div id="fullpage">
+
+    <div id="introwpSlide" class="section" data-anchor="introwp-pg">
+        <div id="intro" style="text-align:center">
+            <h1 style="color:springgreen;">World Population trends</h1>
+            <h3 style="color:springgreen;" class="content">A visualization narrative by Adeeti Kaushal (adeetik2@illinois.edu)</h3>
+        </div>
+        <div id="introwp-img">
+        </div>
+    </div>
+
+<div class="section" data-anchor="temp-pg">
+<h2>  About Population Trend </h2>
+<p style="color:aqua;">
+
+    Population is trending upwards and this narrative explains how the world population is trending and would go in future (2010 to 2100).
+    <br>
+    The measure showing the number of dependents, aged 0 to 14 and over the age of 65, to the total population aged 15 to 64.
+    These indicators gives insight into the amount of people of nonworking age compared to the number of those of working age.
+    <br>
+    On next screen, you can choose options by clicking country on map or pick from drop-down to see the population trend. The pyramid chart
+    will show the population of male and female.
+    The country drop-down selection also gives options to select the low, medium and high income countries and then displays population trend
+    accorindly in bar graph and pyramid chart.
+
+</p>
+
+
+</div>
+
+    <div class="section" data-anchor="worldmap-pg">
+        <h2> &nbsp;</h2>
+
+        <div id="map">
+        <svg width="460" height="400" id="example1"></svg>
+
+    </div>
+
+    <div id="info-selector">
+        <label id="country-input-label" name="country-input">Country</label>
+        <select class="form-control" id="country-input"></select>
+        <label id="type-input-label" name="type-input">Population (million)</label>
+        <label id="type-input-annotation" name="type-input-annotation"></label>
+
+        <select class="form-control" id="type-input" style="display:none">
+            <option>Population (million)</option>
+        </select>
+
+    </div>
+
+    <div id="bar" class="bar">
+    </div>
+
+    <div id="year-selector">
+        <div class="range">
+            <label for="year-input"></label>
+            <input id="year-input" type="range" min="2010" max="2095" step="5" value="2010" autocomplete="off">
+        </div>
+        <ul class="range-labels">
+            <li class="active selected">2010</li>
+            <li>2015</li>
+            <li>2020</li>
+            <li>2025</li>
+            <li>2030</li>
+            <li>2035</li>
+            <li>2040</li>
+            <li>2045</li>
+            <li>2050</li>
+            <li>2055</li>
+            <li>2060</li>
+            <li>2065</li>
+            <li>2070</li>
+            <li>2075</li>
+            <li>2080</li>
+            <li>2085</li>
+            <li>2090</li>
+            <li>2095</li>
+        </ul>
+    </div>
+</div>
+
+
+    <div class="section" data-anchor="infoselector-pg">
+        <h2> &nbsp;</h2>
+    </div>
+</div>
+<script src="main.js"></script>
+
+<script>
+
+    new fullpage('#fullpage', {
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+        autoScrolling: true,
+        //scrollHorizontally:true,
+        navigation: true,
+        navigationPosition: 'right',
+        anchors: ["introwp-pg", "temp-pg", "worldmap-pg", "infoselector-pg"],
+        navigationTooltips: ['Intro', 'About', 'Measures By Genre', 'Trends over time', 'Top 15 Movies by Measures', 'Big Picture with Scatter Plot'],
+        slidesNavPosition: "left",
+        keyboardScrolling: true,
+        sectionsColor: ['black', 'black', 'white', 'white'],
+        loopBottom: true,
+    });
+
+</script>
+
+</body>
+</html>
