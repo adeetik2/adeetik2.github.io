@@ -134,7 +134,7 @@
             }).enter().append("rect").attr("class", "age-rect male-age-rect").attr("x", function (t) {
                 return 100 - l(t)
             }).attr("y", function (t, e) {
-                return 240 - 10 * e
+                return 20 - 10 * e
             }).attr("width", function (t) {
                 return l(t)
             }).attr("height", 10).append("title").text(function (t) {
@@ -143,7 +143,7 @@
             t.selectAll(".female-age-rect").data(n.female[e]).attr("width", function (t) {
                 return l(t[1])
             }).enter().append("rect").attr("class", "age-rect female-age-rect").attr("x", 140).attr("y", function (t, e) {
-                return 240 - 10 * e
+                return 20 - 10 * e
             }).attr("width", function (t) {
                 return l(t)
             }).attr("height", 10).append("title").text(function (t) {
@@ -151,14 +151,15 @@
             }), t.selectAll("text").data(s).enter().append("text").attr("x", function (t, e) {
                 return e > 1 ? 105 : 107
             }).attr("y", function (t, e) {
-                return 250 - 10 * e
-            }).text(function (t) {
+                return 30 - 10 * e
+            })
+            .text(function (t) {
                 return t
             }).style("font-size", "11px"), t.append("text").attr("x", 60).attr("y", 45).text("Male").style("font-size", "10px"), t.append("text").attr("x", 160).attr("y", 45).text("Female").style("font-size", "10px");
             const c = d3.scale.linear().domain([a / 1000, 0]).range([-40, 100]),
                 u = d3.scale.linear().domain([0, a / 1000]).range([-40, 100]),
-                f = d3.svg.axis().scale(c).orient("bottom").ticks(3),
-                g = d3.svg.axis().scale(u).orient("bottom").ticks(3);
+                f = d3.svg.axis().scale(c).orient("bottom").ticks(4),
+                g = d3.svg.axis().scale(u).orient("bottom").ticks(4);
             t.append("g").attr("transform", "translate(40,250)").attr("id", "map-legend-axis").call(f), t.append("g").attr("transform", "translate(140,250)").attr("id", "map-legend-axis").call(g), t.append("text").attr("x", 75).attr("y", 280).text("Population (million)")
         }
     }
